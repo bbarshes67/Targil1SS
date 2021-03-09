@@ -7,13 +7,14 @@ import static primitives.Util.*;
  * coordinate system. The class is based on Util controlling the accuracy.
  *
  * @author Dan Zilberstein
+ * @version 5780B updated according to new requirements
  */
 public final class Coordinate {
     /**
      * Coordinate value, intentionally "package-friendly" due to performance
      * constraints
      */
-    final double _coord;
+    final double coord;
 
     /**
      * Coordinate constructor receiving a coordinate value
@@ -22,25 +23,7 @@ public final class Coordinate {
      */
     public Coordinate(double coord) {
         // if it too close to zero make it zero
-        _coord = alignZero(coord);
-    }
-
-    /**
-     * Copy constructor for coordinate
-     *
-     * @param other
-     */
-    public Coordinate(Coordinate other) {
-        _coord = other._coord;
-    }
-
-    /**
-     * Coordinate value getter
-     *
-     * @return coordinate value
-     */
-    public double get_coord() {
-        return _coord;
+        this.coord = alignZero(coord);
     }
 
     /*************** Admin *****************/
@@ -49,11 +32,12 @@ public final class Coordinate {
         if (this == obj) return true;
         if (obj == null) return false;
         if (!(obj instanceof Coordinate)) return false;
-        return isZero(_coord - ((Coordinate)obj)._coord);
+        Coordinate other = (Coordinate)obj;
+        return isZero(coord - other.coord);
     }
 
     @Override
     public String toString() {
-        return "" + _coord;
+        return "" + coord;
     }
 }

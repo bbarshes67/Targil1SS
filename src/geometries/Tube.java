@@ -1,67 +1,43 @@
 package geometries;
 
-import primitives.Point3D;
 import primitives.*;
 
-import java.util.List;
-
-import static primitives.Util.alignZero;
-import static primitives.Util.isZero;
 /**
+ * Tube class implementing a tube, with a radius and axis ray
  *
- * @author ruthy sebban
- */
-/**
- * this class for tube extends from RadialGeometry class
- * class for representing Tube in environment
+ * @author Myriam and Batsheva
  */
 public class Tube {
-    protected
-    Ray _r;
+    protected Ray _r;
     double _radius;
-    /************constrators**********/
+
     /**
+     * Constructor for Tube class, gets a radius and a ray and creates a new match tube
      *
-     * @param radius radius from radicalGeometry class
-     * @param r the ray
+     * @param radius a radius
+     * @param r a ray
      */
     public Tube(double radius, Ray r) {
-        this._r=r;
-         this._radius = radius;
+        _r = r;
+        _radius = radius;
     }
-   /* public Tube(){
-        this.r=new Ray();
-    }*/
 
-  /*  @Override
-    public Ray getR() {
-        return r;
-    }
-*/
-    /********to string************/
     @Override
     public String toString() {
         return "Tube{" +
                 "r=" + _r +
                 '}';
     }
-    /**getNormal**/
+
     /**
-     *
+     * Return a normal from a point3D on a tube
      * @param point of Point3D
-     * @return Normal for tube
+     * @return a normal from a point3D on a tube
      */
     public Vector getNormal(Point3D point) {
 
         return null;
 
     }
-    /**
-     * find intersections point3D with tube
-     * @param ray ray for casting
-     * @return list of intersections point3D or null if there were not found
-     */
-
-
 
 }

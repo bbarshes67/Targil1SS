@@ -5,36 +5,35 @@ import java.util.Objects;
 
 import static primitives.Util.alignZero;
 import static primitives.Util.isZero;
-
 /**
  * Cylinder extends Tube class a ray
  *class for representing cylinder in 3D environment
- * @author ruthy sebban and Talya Dori
+ * @author Batsheve Barsheshet and Myriam Aflalo
  */
 public class Cylinder extends Tube {
-    private double hieght;
+    private final double height;
 
-/*************constractors**********/
+
     /**
      * @param radius radius from radical geometry
-     * @param r      ray from tube
-     * @param hieght of cylinder
+     * @param r  ray from tube
+     * @param height of cylinder
      */
-    public Cylinder(double radius, Ray r, double hieght) {
+    public Cylinder(double radius, Ray r, double height) {
         super(radius, r);
-        this.hieght = hieght;
+        this.height = height;
     }
 
-    /************getter***************/
-    public double getHieght() {
-        return hieght;
+
+    public double getHeight() {
+        return height;
     }
 
-    /***************to string*********/
+
     @Override
     public String toString() {
         return "Cylinder{" +
-                "hieght=" + hieght +
+                "height=" + height +
                 '}';
     }
 

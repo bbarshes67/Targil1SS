@@ -1,27 +1,39 @@
 package geometries;
+
 import primitives.*;
+
 import static primitives.Util.alignZero;
 import static primitives.Util.isZero;
+
 import java.util.List;
 
 /**
  * Plane: class for representing plane in environment
+ *
+ * @author Myriam and Batsheva
  */
 
 public class Plane implements Geometry {
     Point3D p;
     Vector normal;
 
-    /*************** Constructor ********************/
-
+    /**
+     * /**
+     * Constructor for Plane class, gets three points on the required plane and creates it
+     *
+     * @param p1 point 1
+     * @param p2 point 2
+     * @param p3 point 3
+     */
     public Plane(Point3D p1, Point3D p2, Point3D p3) {
-        this.p  = new Point3D(p1);
-        this.normal = null;
+        p = p1;
+        normal = null;
     }
 
     /**
-     * @param p-point in the plane
-     * @param normal  to plane
+     * Constructor for Plane class, gets a point and a normal and creates match plane
+     * @param p a point on the plane
+     * @param normal a normal vector to the plane
      */
     public Plane(Point3D p, Vector normal) {
         this.p = p;
@@ -42,24 +54,17 @@ public class Plane implements Geometry {
      * @return vector normal in a plane
      */
     public Vector getNormal() {
+
         return getNormal(new Point3D(0, 0, 0));
     }
 
     /********getter********/
     public Point3D getP() {
+
         return p;
     }
 
-    /**
-     * find intersections point3D with plane
-     * @param ray ray for casting
-     * @return list of intersections point3D or null if there were not found
-     */
 
-    /**
-     *
-     * @param ray from camera
-     * @param maxd maxDistance to geometry point
-     * @return list of intersections between ray and geometry
-     */
+
+
 }
