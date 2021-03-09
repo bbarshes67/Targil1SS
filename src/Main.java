@@ -1,3 +1,10 @@
+/**
+ * Myriam Aflalo 2097111076
+ * aflalomyriam@gmail.com
+ * Batsheva Barsheshet 315321695
+ * batbar71@gmail.com
+ */
+
 import primitives.*;
 import static java.lang.System.out;
 import static primitives.Util.*;
