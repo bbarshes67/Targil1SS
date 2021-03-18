@@ -19,12 +19,4 @@ public class Triangle extends Polygon{
 
     }
 
-    /**
-     * Return a normal to a point on the triangle
-     * @param point a point on the triangle
-     * @return a normal to a point on the triangle
-     */
-    public Vector getNormal(Point3D point) {
-        return null;
-    }
 }

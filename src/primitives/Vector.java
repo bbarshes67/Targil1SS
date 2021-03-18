@@ -32,18 +32,13 @@ public class Vector {
     }
 
     /**
-     * Vector constructor that gets 3 double numbers and create a new vector from them
-     *
+     * mainly used constructor
      * @param _x x coordinate value
      * @param _y y coordinate value
      * @param _z z coordinate value
      */
     public Vector(double _x, double _y, double _z) {
-
-        if (new Point3D(new Coordinate(_x), new Coordinate(_y), new Coordinate(_z)).equals(Point3D.ZERO)) {
-            throw new IllegalArgumentException("vector cannot be the zero vector");
-        }
-        this._head = new Point3D(new Coordinate(_x), new Coordinate(_y), new Coordinate(_z));
+        this(new Point3D(_x,_y,_z));
     }
 
 
@@ -55,10 +50,7 @@ public class Vector {
      * @param z coordinate
      */
     public Vector(Coordinate x, Coordinate y, Coordinate z) {
-        if (new Point3D(x, y, z).equals(Point3D.ZERO)) {
-            throw new IllegalArgumentException("vector cannot be the zero vector");
-        }
-        this._head = new Point3D(x, y, z);
+        this(new Point3D(x,y,z));
     }
 
 
